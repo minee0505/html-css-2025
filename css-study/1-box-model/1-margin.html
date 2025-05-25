@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        .container {
+            width: 400px;
+            height: 300px;
+            border: 4px solid red;
+            /*margin은 여백을 추가한다고 생각해야 함. 박스를 옮기는게 아님*/
+            margin-left: 40px;
+        }
+        .box {
+            width: 25%;
+            height: 33%;
+            border: 4px solid gray;
+            background: #333;
+        }
+        .box:first-child {
+            margin-left: 20px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        .box:last-child {
+        /* 마진 단축 속성 */
+            /* 4방향 전부 균일한 마진을 넣음 */
+            margin: 7px;
+            /*[상하] [좌우]*/
+            margin: 10px 20px;
+            /* 12시부터 시계방향 */
+            margin: 10px 20px 30px 40px;
+        }
+        section h1 {
+            background: orange;
+            width: 60%;
+            text-align: center;
+            /*마진 레프트 오토 쓸거면 마진 라이트도 신경써줘야 함 */
+            /*margin-leff: auto;*/
+            /*margin-right: auto;*/
+
+            /*박스 x축 정렬 공식*/
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <h1>안뇽안뇽</h1>
+    </section>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
