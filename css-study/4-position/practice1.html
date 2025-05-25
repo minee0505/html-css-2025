@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="common.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+        section {
+            background: lightpink;
+            border: 2px solid lightgray;
+            width: 300px;
+        }
+        h1 {
+            color: green;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: 10px;
+            padding: 10px 0;
+        }
+        li {
+            padding: 5px 20px;
+            color: gray;
+        }
+        li:last-child {
+            padding-bottom: 10px;
+        }
+        a:hover {
+            color: blue;
+            text-decoration-line: underline;
+        }
+        .more {
+            position: relative;
+        }
+        .more > a {
+            position: absolute;
+            bottom: 150px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>동물병원 24시</h1>
+    <ul class="content">
+        <li><a href="#">밥 먹이는 시간 지킬 것</a></li>
+        <li><a href="#">길고양이 주사 맞히기</a></li>
+        <li><a href="#">눈 아픈 동물 목에 깔때기 씌우기</a></li>
+        <li><a href="#">매일 목욕 시킬 것</a></li>
+        <li><a href="#">이름없는 애들 이름 짓지 말기</a></li>
+    </ul>
+    <div class="more">
+        <a href="#">더보기</a>
+    </div>
+</section>
+</body>
+</html>

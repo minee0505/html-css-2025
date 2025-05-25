@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .container {
+            margin: 100px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background: orange;
+            border: 4px dashed tomato;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box:nth-child(2) {
+            background: yellowgreen;
+            /*
+              절대 위치: 위치를 지정할 때 주변 요소들과의 관계를 무시하고
+                         "레이아웃에서 빠져나와(마치 Z축으로 튀어나온 것처럼)" 지정된 위치에 딱 붙는다.
+
+                            - 원래 있던 자리(공간)를 남기지 않고 사라진다(투명해진 게 아니라 아예 없는 취급)!
+                            - 그래서 다른 요소들이 마치 얘가 없었던 것처럼 배치(그 자리를 메꾸며 올라온다)된다.
+                            - 기준이 되는 부모 요소가 없으면 화면 전체(=브라우저)가 기준이 된다.
+*/
+            position: absolute;
+            /*뷰포트 or 기준 요소(position: relative가 설정된 부모)의 왼쪽 위 모서리에서 50px 아래로 이동*/
+            top: 50px;
+            /*뷰포트 or 기준 요소(position: relative가 설정된 부모)의 왼쪽 위 모서리에서 50px 오른쪽으로 이동 */
+            left: 50px;
+
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+</div>
+</body>
+</html>
