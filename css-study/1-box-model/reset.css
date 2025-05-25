@@ -1,0 +1,19 @@
+
+/*css reset code*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    cursor: default;
+}
