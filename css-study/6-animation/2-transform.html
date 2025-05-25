@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Title</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background: orange;
+            margin: 50px;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 1s;
+        }
+        .box1:hover {
+            /* 회전효과 */
+            /*transform: rotate(-720deg);*/
+            animation: inf-rotate 20s infinite linear;
+        }
+        @keyframes inf-rotate {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        .box2:hover {
+            /* 이동 효과 */
+            transform: translate(-30px, 0);
+            /* relative는 레이아웃도 같이 움직이고 안 돌아옴, translate는 시각적으로만 이동하고 자리 그대로 유지됨 */
+            /* 정적 위치 조정엔 relative, 애니메이션이나 퍼포먼스엔 translate 사용 */
+
+            /*position: relative;*/
+            /*left: -30px;*/
+        }
+        .box3:hover {
+            /* 확대 축소효과 */
+            transform: scale(1.7);
+        }
+        .wrap {
+            overflow: hidden;
+        }
+        .box4 {
+            transform: skew(15deg, 0);
+        }
+        .box5:hover {
+            transform: rotate(135deg) scale(0.7) translateX(100px);
+        }
+
+    </style>
+</head>
+    <body>
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box wrap">
+            <div class="box box3">3</div>
+        </div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </body>
+</html>

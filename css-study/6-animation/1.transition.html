@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: red;
+            margin: 50px;
+            transition: 1s;
+
+            /*길이는 천천히 늘어나는데, 색깔은 바로 바뀜*/
+            /*transition-property: width;*/
+            /*transition-duration: 1s;*/
+
+            /*가로는 확 늘어나는 데, 색깔만 천천히 변함*/
+            /*transition-property: background;*/
+            /*transition-duration: 2s;*/
+
+            /*transition-property: background, width;*/
+            /*transition-duration: 3s,1s;*/
+
+            transition-property: all;
+            /*0.3s = 300ms*/
+            transition-duration: 300ms;
+
+            /*회원가입할 때 비번 다 쓰기 전까지 잠가놓는 경우에 사용*/
+            transition-delay: 0.5s;
+
+            /*linear: 속도 균일, ease: 처음에는 속도 빨랐다가 뒤에서 느려짐*/
+            transition-timing-function: linear;
+        }
+        .box:hover {
+            width: 300px;
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box"></div>
+</body>
+</html>
