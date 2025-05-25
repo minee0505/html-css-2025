@@ -1,0 +1,30 @@
+@import url("common.css");
+
+.board {
+    background: gray;
+    width: 70%;
+    margin: 20px auto;
+    font-size: 3em;
+    color: #fff;
+    padding: 15px;
+}
+.board li {
+    /*border: 4px solid yellow;*/
+    margin-bottom: 15px;
+}
+.board li:last-child {
+    margin-bottom: 0;
+}
+.board li a {
+    /*a 태그는 기본적으로 인라인 요소라서 가로 영역이 텍스트에 딱 맞게 좁다.
+        그래서 사용자가 링크 주변 여백을 클릭해도 동작하도록 하려면,
+        display: block으로 바꿔주는 게 좋다.*/
+    display: block;
+    /*background: red;*/
+    font-weight: 700;
+    padding: 15px;
+}
+.board li a:hover {
+    color: yellow;
+    background: skyblue;
+}
